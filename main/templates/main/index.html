@@ -1,0 +1,24 @@
+{% extends "main/base.html" %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <div class="feature">
+
+        <h1>добро пожаловать </h1>
+        <p>Lorem ipsum dolor, adipisci cumque officiis fugit minima earum ea  quae saepe autem omnis doloribus aliquam reiciendis? Quos, labore eligendi reiciendis ullam voluptatum obcaecati non possimus suscipit modi distinctio fugit perspiciatis esse aspernatur nisi, voluptatem excepturi expedita minus quam eos sit? Illo vitae quos eligendi doloremque repellat, inventore, delectus numquam perspiciatis assumenda officia pariatur earum! Numquam enim rerum recusandae sapiente odit? Velit reiciendis earum libero id iste.</p>
+        <button class="btn btn-warning">о нас</button>
+        <h1>{{title}}</h1>
+        <p>{{value}}</p>
+
+
+        {% for i in value %}
+            {% if i == 'oomat' %}
+                {% filter upper %}
+                    <p>{{i}}</p>
+                {% endfilter %}
+            {% endif %}
+        {% endfor %}
+    
+    </div>
+    
+{% endblock %}
